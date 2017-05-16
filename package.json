@@ -1,0 +1,24 @@
+{
+  "name": "insbaby",
+  "version": "1.0.0",
+  "description": "就是框架再搭建一遍，不告诉你为了啥，咋地",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "好了"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daisymark/insBaby.git"
+  },
+  "keywords": [
+    "gaojing&hongling"
+  ],
+  "author": "gaojing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daisymark/insBaby/issues"
+  },
+  "homepage": "https://github.com/daisymark/insBaby#readme"
+}
