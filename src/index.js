@@ -1,5 +1,15 @@
-module.exports = function() {
-	var app = document.createElement('div');
-	app.textContent = "可以啊";
-	return app;
-};
+import React, {Component} from 'react'
+var data = require('./data.json')
+var style = require('./index.css')
+
+class App extends Component{
+  render() {
+    return (
+      <div className="main">
+        {data.text}
+      </div>
+    );
+  }
+}
+
+export default App

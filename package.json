@@ -3,10 +3,18 @@
   "version": "1.0.0",
   "description": "就是框架再搭建一遍，不告诉你为了啥，咋地",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "css-loader": "^0.28.1",
+    "style-loader": "^0.17.0",
+    "webpack-dev-server": "^2.4.5"
+  },
   "scripts": {
-    "test": "好了"
+    "start": "webpack-dev-server --module-bind 'json=json-loader' 'css=style-loader!css-loader' --progress"
   },
   "repository": {
     "type": "git",
