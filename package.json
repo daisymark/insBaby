@@ -1,32 +1,42 @@
 {
-  "name": "insbaby",
+  "name": "gaojing",
   "version": "1.0.0",
-  "description": "就是框架再搭建一遍，不告诉你为了啥，咋地",
+  "description": "better",
   "main": "index.js",
-  "dependencies": {
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "css-loader": "^0.28.1",
-    "style-loader": "^0.17.0",
-    "webpack-dev-server": "^2.4.5"
-  },
   "scripts": {
-    "start": "webpack-dev-server --module-bind 'json=json-loader' 'css=style-loader!css-loader' --progress"
+    "start": "webpack-dev-server --progress",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/daisymark/insBaby.git"
   },
   "keywords": [
-    "gaojing&hongling"
+    "keyi"
   ],
   "author": "gaojing",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/daisymark/insBaby/issues"
   },
-  "homepage": "https://github.com/daisymark/insBaby#readme"
+  "homepage": "https://github.com/daisymark/insBaby#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.1",
+    "css-loader": "^0.28.4",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
 }

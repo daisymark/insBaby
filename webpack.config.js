@@ -1,37 +1,39 @@
-//“__dirname”是node.js中的一个全局变量，它指向当前执行脚本所在的目录。
 var path = require("path");
+var webpack = require('webpack');
 module.exports = {
-	devtool: 'eval-source-map',//配置生成Source Maps，选择合适的选项
-	entry: {
-		app: ["./src/main.js"]//唯一入口文件
-	},
+	entry: './src/index.js',
 	output: {
 		path: path.resolve(__dirname, "page"),
-		filename: "bundle.js"//打包后输出文件的文件名
+		filename: 'bundle.js'
 	},
 	module: {
-	    rules: [
-			{
-				test: /\.json$/,
-				use: 'json-loader'
-			},
-			{
-				test: /\.css$/,
-				use: [ 'style-loader', 'css-loader']
-			},
+		loaders: [
 	        {
-				test: /\.js$/,
-				use: {
-					loader: 'babel-loader'
-				}
-			}
+	            test: /\.js$/,
+	            exclude: /(node_modules)/,
+	            loader: 'babel-loader',
+	            query: {
+	                cacheDirectory: true,
+	                presets: ['es2015', 'react']
+	            }
+	        },
+	        {
+	            test: /\.scss$/,
+	            use: [{
+	                loader: "style-loader" // creates style nodes from JS strings
+	            }, {
+	                loader: "css-loader" // translates CSS into CommonJS
+	            }, {
+	                loader: "sass-loader" // compiles Sass to CSS
+	            }]
+	        }
 	    ]
 	},
-	devServer: {
-		contentBase: path.join(__dirname, "page"),
-		compress: true,
-		port: 9000,
-	    historyApiFallback: true,//不跳转
-	    inline: true//实时刷新
-	} 
-};
+    devServer: {
+        contentBase: path.join(__dirname, "page"),
+        compress: true,
+        port: 9000,
+        historyApiFallback: true,//不跳转
+        inline: true//实时刷新
+    } 
+ };

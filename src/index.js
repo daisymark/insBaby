@@ -1,15 +1,12 @@
-import React, {Component} from 'react'
-var data = require('./data.json')
-var style = require('./index.css')
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Header from './component/header/index.js'
+import '../css/index.scss'
 
-class App extends Component{
+class Page extends React.Component {
   render() {
-    return (
-      <div className="main">
-        {data.text}
-      </div>
-    );
-  }
+    return <Header />
+  } 
 }
 
-export default App
+ReactDOM.render(<Page />, document.getElementById('app'));
