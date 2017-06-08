@@ -22,7 +22,9 @@ export default class Header extends React.Component {
 
   render() {
     return (
-      <div>Seconds Elapsed: {this.state.secondsElapsed}</div>
+      <div className="header">Seconds Elapsed: {this.state.secondsElapsed}
+        <img src={`${require('../../../assets/laog.jpg')}`} />
+      </div>
     );
   }
 }

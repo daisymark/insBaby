@@ -26,7 +26,14 @@ module.exports = {
 	            }, {
 	                loader: "sass-loader" // compiles Sass to CSS
 	            }]
-	        }
+	        },
+	        {
+	        	test: /\.(png|jpg)$/,
+				loader: 'file-loader',
+ 				query: {
+  					useRelativePath: process.env.NODE_ENV === "production"
+ 				}
+ 			}
 	    ]
 	},
     devServer: {
