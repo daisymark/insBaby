@@ -27,13 +27,13 @@ module.exports = {
 	                loader: "sass-loader" // compiles Sass to CSS
 	            }]
 	        },
-	        {
-	        	test: /\.(png|jpg)$/,
-				loader: 'file-loader',
- 				query: {
-  					useRelativePath: process.env.NODE_ENV === "production"
- 				}
- 			}
+ 			{	test: /\.(png|jpg|gif)$/,
+				loader: 'url-loader',
+				query: {
+					name: '[path][name].[ext]',
+					limit: 8321 // inline base64 URLs for <=8k images, direct URLs for the rest
+				}
+			}
 	    ]
 	},
     devServer: {
