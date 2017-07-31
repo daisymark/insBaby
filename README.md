@@ -4,3 +4,9 @@
 如果出现问题:
 npm install -D babel-loader
 npm install -D babel-core
+
+运行：
+npm start
+
+打开网页：
+http://localhost:9000/

@@ -2,17 +2,22 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Header from './component/header/index.js'
 import '../css/index.scss'
-import { Router, Route, hashHistory } from 'react-router';
-
+import {
+  HashRouter,
+  Route,
+  Link
+} from 'react-router-dom';
 
 class Page extends React.Component {
   render() {
     return <Header />
   } 
 }
-ReactDOM.render((
-  <Router history={hashHistory}>
-    <Route path="/" component={App}/>
-  </Router>
-), document.getElementById('Page'));
 
+ReactDOM.render((
+   <HashRouter>
+      <div>
+        <Route exact path="/" component={Page} />
+      </div>
+   </HashRouter >
+), document.getElementById( 'app' ) )
